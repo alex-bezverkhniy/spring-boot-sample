@@ -2,14 +2,14 @@ package com.alexbezverkhniy.samples.controllers;
 
 import com.alexbezverkhniy.samples.services.SampleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Created by Alex Bezverkhniy on 2/1/18.
  */
-@Controller
+@RestController
 @RequestMapping(value = "/api/sample")
 public class SampleController {
 

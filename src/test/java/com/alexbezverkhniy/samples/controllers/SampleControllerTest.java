@@ -7,6 +7,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertEquals;
+
 /**
  * Basic integration test for MVC Spring App
  *
@@ -23,5 +26,8 @@ public class SampleControllerTest {
     public void greetingTest() {
         String expected = "Hello Alex!";
         String actual = restTemplate.getForEntity("/api/sample/greeting", String.class).getBody();
+        
+        assertNotNull(actual);
+        assertEquals(expected, actual);
     }
 }
